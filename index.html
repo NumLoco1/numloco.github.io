@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>NumLoco</title>
+
+<!-- ICONOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e9dfd4;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.left {
+  text-align: center;
+  max-width: 300px;
+}
+
+.left img {
+  width: 160px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.left h2 {
+  margin: 15px 0 5px;
+}
+
+.left p {
+  color: #555;
+}
+
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  margin: 8px;
+  font-size: 22px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #4f6edb;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 600px;
+}
+
+.card {
+  background: #f3e9df;
+  padding: 18px;
+  border-radius: 15px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #666;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 12px;
+  background: #4f6edb;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #3c56b8;
+  transform: scale(1.03);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- PERFIL -->
+  <div class="left">
+    <img src="num.jpg">
+    <h2>NumLoco</h2>
+    <p>Aprende a monetizar tus redes y generar ingresos 💸</p>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/numloco1/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://ar.pinterest.com/NumLoco/" target="_blank"><i class="fab fa-pinterest"></i></a>
+      <a href="https://www.youtube.com/@NumLocoOficial" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <!-- TARJETAS -->
+  <div class="right">
+
+    <div class="card">
+      <h3>Centro de Creadores</h3>
+      <p>Empieza a generar ingresos con tus redes</p>
+      <a href="https://payhip.com/NumLocoCentrodeCreadores" target="_blank" class="btn">
+        <i class="fas fa-graduation-cap"></i> Acceder ahora
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Pinterest</h3>
+      <p>Ideas y contenido viral</p>
+      <a href="https://ar.pinterest.com/NumLoco/" target="_blank" class="btn">
+        <i class="fab fa-pinterest"></i> Ver Pinterest
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Instagram</h3>
+      <p>Contenido diario</p>
+      <a href="https://www.instagram.com/numloco1/" target="_blank" class="btn">
+        <i class="fab fa-instagram"></i> Ir a Instagram
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>YouTube</h3>
+      <p>Videos y tutoriales</p>
+      <a href="https://www.youtube.com/@NumLocoOficial" target="_blank" class="btn">
+        <i class="fab fa-youtube"></i> Ver canal
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
