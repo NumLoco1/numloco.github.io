@@ -2,160 +2,662 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Recursos, cursos y herramientas para aprender a monetizar contenido y crear ingresos online.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="NumLoco">
+<meta name="keywords" content="monetización redes sociales, ganar dinero online, marketing digital, afiliados, TikTok ingresos">
+<meta name="theme-color" content="#c0392b">
+<meta property="og:title" content="NumLoco - Monetiza tus redes">
+<meta property="og:description" content="Aprendé a generar ingresos con redes sociales paso a paso">
+<meta property="og:image" content="https://numloco1.github.io/numloco.github.io/num.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://numloco1.github.io/numloco.github.io/">
+<meta property="og:site_name" content="NumLoco">
+<link rel="canonical" href="https://numloco1.github.io/numloco.github.io/">
+<link rel="icon" href="favicon.png">
 <title>NumLoco</title>
-
-<!-- ICONOS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #e9dfd4;
+  background: #f5e0e0;
+  overflow-x: hidden;
 }
 
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes shimmer {
+  0%   { left: -200%; }
+  100% { left: 200%; }
+}
+@keyframes gradientMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes bounceIn {
+  0%   { transform: scale(0.8); opacity: 0; }
+  60%  { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* BANNER */
+.banner {
+  background: linear-gradient(270deg, #c0392b, #e74c3c, #922b21, #c0392b);
+  background-size: 400% 400%;
+  animation: gradientMove 6s ease infinite, fadeDown 0.6s ease both;
+  color: white;
+  text-align: center;
+  padding: 22px 20px;
+}
+.banner h1 { margin: 0 0 6px; font-size: 20px; letter-spacing: 0.5px; }
+.banner p  { margin: 0 0 16px; font-size: 14px; opacity: 0.92; }
+
+/* CTA BANNER */
+.btn-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: #c0392b;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+  border: 2px solid white;
+}
+.btn-banner:hover {
+  background: transparent;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* AVISOS */
+.aviso-afiliados {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  background: #fff5f5;
+  padding: 10px 20px;
+  border-bottom: 1px solid #f0d0d0;
+  line-height: 1.6;
+}
+.aviso-afiliados i { color: #c0392b; margin-right: 4px; }
+
+.aviso-antispam {
+  text-align: center;
+  font-size: 11px;
+  color: #999;
+  background: #fafafa;
+  padding: 8px 20px;
+  border-bottom: 1px solid #eee;
+  line-height: 1.6;
+}
+.aviso-antispam i { color: #aaa; margin-right: 4px; }
+
+/* SOBRE MÍ */
+.sobre-mi {
+  max-width: 860px;
+  margin: 30px auto 0;
+  padding: 0 40px;
+  animation: fadeDown 0.7s ease 0.3s both;
+}
+.sobre-mi-inner {
+  background: #fdf0f0;
+  border-left: 4px solid #c0392b;
+  border-radius: 12px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.sobre-mi-inner .icono { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.sobre-mi-inner p { margin: 0; font-size: 14px; color: #444; line-height: 1.7; }
+.sobre-mi-inner p strong { color: #c0392b; }
+
+/* CONTENEDOR */
 .container {
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 30px 40px 40px;
   gap: 50px;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
 
+/* PERFIL */
 .left {
   text-align: center;
-  max-width: 300px;
+  max-width: 280px;
+  animation: fadeDown 0.7s ease 0.2s both;
 }
-
-.left img {
+.left img.profile {
   width: 160px;
   border-radius: 50%;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.left img.profile:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 10px 25px rgba(192,57,43,0.4);
+}
+.left h2 { margin: 15px 0 5px; font-size: 22px; }
+.left p   { color: #555; font-size: 14px; }
+
+.badge-redes {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #c0392b;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
 }
 
-.left h2 {
-  margin: 15px 0 5px;
-}
-
-.left p {
-  color: #555;
-}
-
-.socials {
-  margin-top: 15px;
-}
-
+.socials { margin-top: 15px; }
 .socials a {
   margin: 8px;
-  font-size: 22px;
+  font-size: 24px;
   color: #333;
   transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
-
 .socials a:hover {
-  color: #4f6edb;
+  color: #c0392b;
+  transform: translateY(-4px) scale(1.2);
 }
 
+/* GRID */
 .right {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
   gap: 20px;
   max-width: 600px;
 }
 
+.card:nth-child(1) { animation: fadeUp 0.5s ease 0.1s both; }
+.card:nth-child(2) { animation: fadeUp 0.5s ease 0.2s both; }
+.card:nth-child(3) { animation: fadeUp 0.5s ease 0.3s both; }
+.card:nth-child(4) { animation: fadeUp 0.5s ease 0.4s both; }
+.card:nth-child(5) { animation: fadeUp 0.5s ease 0.5s both; }
+.card:nth-child(6) { animation: fadeUp 0.5s ease 0.6s both; }
+.card:nth-child(7) { animation: fadeUp 0.5s ease 0.7s both; }
+.card:nth-child(8) { animation: fadeUp 0.5s ease 0.8s both; }
+.card:nth-child(9) { animation: fadeUp 0.5s ease 0.9s both; }
+
 .card {
-  background: #f3e9df;
+  background: #fdf0f0;
   padding: 18px;
   border-radius: 15px;
   box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(192,57,43,0.2);
 }
 
-.card h3 {
-  margin: 0;
-  font-size: 16px;
+/* TARJETA ACADEMIA DESTACADA */
+.card-featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #fff5f5, #ffe8e8);
+  border: 2px solid #c0392b;
+  position: relative;
+  overflow: hidden;
+  animation: bounceIn 0.7s ease 0.1s both !important;
+}
+.card-featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  background: rgba(255,255,255,0.25);
+  transform: skewX(-20deg);
+  animation: shimmer 3s infinite;
+}
+.card-featured .tag-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #c0392b;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.card-featured .card-header img {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  border: 2px solid #c0392b;
+}
+.card-featured h3 { font-size: 17px !important; }
+
+/* PRECIO */
+.precio {
+  font-size: 15px;
+  font-weight: bold;
+  color: #c0392b;
+  margin: 4px 0 10px;
 }
 
-.card p {
-  font-size: 13px;
-  color: #666;
+/* TARJETA RECOMENDADA JAZZ */
+.card-full {
+  grid-column: 1 / -1;
+  border: 2px solid #c0392b;
+  background: linear-gradient(135deg, #fdf0f0, #ffe8e8);
+  position: relative;
+  overflow: hidden;
+}
+.card-full::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  transform: skewX(-20deg);
+  animation: shimmer 4s infinite;
+}
+.card-full .etiqueta {
+  font-size: 11px;
+  font-weight: bold;
+  color: #c0392b;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.card-full .card-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #c0392b;
 }
 
+/* CABECERA TARJETA */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.card-header img {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.card:hover .card-header img { transform: rotate(4deg) scale(1.08); }
+.card h3 { margin: 0 0 2px; font-size: 15px; }
+.card p  { font-size: 13px; color: #666; margin: 0; }
+
+/* BOTONES */
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 12px;
+  margin-top: auto;
   padding: 12px;
-  background: #4f6edb;
+  background: #c0392b;
   color: white;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
 }
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  transform: skewX(-20deg);
+  transition: 0.4s;
+}
+.btn:hover::after { left: 150%; }
+.btn:hover { background: #96281b; transform: scale(1.03); }
+.btn:focus { outline: 2px solid #000; }
 
-.btn:hover {
-  background: #3c56b8;
-  transform: scale(1.03);
+.btn-ml { background: #ffe600; color: #333; }
+.btn-ml:hover { background: #e6cf00; color: #333; }
+
+.btn-amazon { background: #ff9900; color: #111; }
+.btn-amazon:hover { background: #e68a00; color: #111; }
+
+.btn-whatsapp { background: #25D366; color: white; }
+.btn-whatsapp:hover { background: #1da851; color: white; }
+
+.btn-pronto {
+  background: #bbb;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7;
+  pointer-events: none;
+}
+.btn-pronto:hover { background: #bbb; transform: none; }
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 12px;
+  color: #999;
+  line-height: 2;
+}
+.footer a {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer a:hover { color: #c0392b; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .sobre-mi { padding: 0 20px; }
+  .container { padding: 20px; gap: 30px; }
+  .right { grid-template-columns: 1fr; }
+  .banner h1 { font-size: 17px; }
+  .btn-banner { font-size: 13px; padding: 9px 18px; }
 }
 </style>
 </head>
 
 <body>
 
+<!-- BANNER -->
+<div class="banner">
+  <h1>♦️🌻 ¡Bienvenido a mi espacio de recursos!</h1>
+  <p>Todo lo que uso, recomiendo y enseño — en un solo lugar 🚀</p>
+  <a href="https://payhip.com/NumLocoCentrodeCreadores"
+     target="_blank" rel="noopener noreferrer nofollow sponsored"
+     title="Empezar en la Academia de Creadores"
+     class="btn-banner">
+    🔥 Empezar ahora
+  </a>
+</div>
+
+<!-- AVISO DE AFILIADOS -->
+<div class="aviso-afiliados">
+  <i class="fas fa-info-circle"></i>
+  Algunos enlaces son de afiliado. Esto significa que puedo recibir una comisión
+  sin costo extra para vos. No es asesoramiento financiero, solo comparto mi experiencia personal. 💛
+</div>
+
+<!-- AVISO ANTISPAM -->
+<div class="aviso-antispam">
+  <i class="fas fa-shield-alt"></i>
+  Este sitio no está afiliado a TikTok ni garantiza resultados económicos.
+  Los resultados dependen del esfuerzo individual de cada persona.
+</div>
+
+<!-- SOBRE MÍ -->
+<div class="sobre-mi">
+  <div class="sobre-mi-inner">
+    <div class="icono">👋</div>
+    <p>
+      Hola, soy <strong>NumLoco</strong> — creador de contenido enfocado en
+      <strong>monetización de redes sociales</strong> y marketing digital.
+      Llevo más de un año compartiendo estrategias reales para que cualquier
+      persona pueda <strong>aprender a monetizar contenido y crear ingresos online</strong>.
+      Acá vas a encontrar mis cursos, recursos favoritos y todo lo que
+      recomiendo con confianza. 💪
+    </p>
+  </div>
+</div>
+
 <div class="container">
 
   <!-- PERFIL -->
   <div class="left">
-    <img src="num.jpg">
-    <h2>NumLoco</h2>
-    <p>Aprende a monetizar tus redes y generar ingresos 💸</p>
-
+    <img class="profile" src="num.jpg"
+         alt="NumLoco creador de contenido monetización redes sociales"
+         loading="lazy">
+    <h2>♦️🌻 NumLoco</h2>
+    <p>Aprende a monetizar tus redes paso a paso 📲</p>
+    <div>
+      <span class="badge-redes">
+        <i class="fas fa-heart"></i> Seguime en mis otras redes
+      </span>
+    </div>
     <div class="socials">
-      <a href="https://www.instagram.com/numloco1/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://ar.pinterest.com/NumLoco/" target="_blank"><i class="fab fa-pinterest"></i></a>
-      <a href="https://www.youtube.com/@NumLocoOficial" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/numloco1/"
+         target="_blank" rel="noopener noreferrer"
+         title="Ir al Instagram de NumLoco">
+        <i class="fab fa-instagram"></i></a>
+      <a href="https://ar.pinterest.com/NumLoco/"
+         target="_blank" rel="noopener noreferrer"
+         title="Ir al Pinterest de NumLoco">
+        <i class="fab fa-pinterest"></i></a>
+      <a href="https://www.youtube.com/@NumLocoOficial"
+         target="_blank" rel="noopener noreferrer"
+         title="Ir al YouTube de NumLoco">
+        <i class="fab fa-youtube"></i></a>
     </div>
   </div>
 
   <!-- TARJETAS -->
   <div class="right">
 
-    <div class="card">
-      <h3>Centro de Creadores</h3>
-      <p>Empieza a generar ingresos con tus redes</p>
-      <a href="https://payhip.com/NumLocoCentrodeCreadores" target="_blank" class="btn">
-        <i class="fas fa-graduation-cap"></i> Acceder ahora
+    <!-- 1. ACADEMIA DESTACADA -->
+    <div class="card card-featured">
+      <div class="tag-top">
+        <i class="fas fa-fire"></i> Más popular
+      </div>
+      <div class="card-header">
+        <img src="numloco2.jpeg"
+             alt="Academia de Creadores NumLoco monetización redes sociales"
+             loading="lazy">
+        <div>
+          <h3>Academia de Creadores</h3>
+          <p>Te enseño a monetizar tu contenido paso a paso 💸</p>
+        </div>
+      </div>
+      <a href="https://payhip.com/NumLocoCentrodeCreadores"
+         target="_blank" rel="noopener noreferrer nofollow sponsored"
+         title="Acceder a la Academia de Creadores de NumLoco"
+         class="btn">
+        <i class="fas fa-graduation-cap"></i> Empezar a monetizar →
       </a>
     </div>
 
+    <!-- 2. ASESORÍA 1:1 -->
     <div class="card">
-      <h3>Pinterest</h3>
-      <p>Ideas y contenido viral</p>
-      <a href="https://ar.pinterest.com/NumLoco/" target="_blank" class="btn">
-        <i class="fab fa-pinterest"></i> Ver Pinterest
+      <div class="card-header">
+        <img src="num.jpg"
+             alt="Asesoría 1 a 1 personalizada con NumLoco"
+             loading="lazy">
+        <div>
+          <h3>Asesoría 1:1</h3>
+          <p>Sesión personalizada para tu cuenta 🎯</p>
+        </div>
+      </div>
+      <div class="precio">💰 Sesión personalizada</div>
+      <a href="https://payhip.com/b/1MDUe"
+         target="_blank" rel="noopener noreferrer nofollow sponsored"
+         title="Agendar asesoría 1 a 1 con NumLoco"
+         class="btn">
+        <i class="fas fa-calendar-check"></i> Empezar ahora →
       </a>
     </div>
 
+    <!-- 3. MERCADO LIBRE -->
+    <!-- ⚠️ Cuando tengas tu link reemplazá por:
+         <a href="TU_LINK" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn btn-ml"> -->
     <div class="card">
-      <h3>Instagram</h3>
-      <p>Contenido diario</p>
-      <a href="https://www.instagram.com/numloco1/" target="_blank" class="btn">
+      <div class="card-header">
+        <img src="mercadolibre.png"
+             alt="Tienda Mercado Libre productos recomendados NumLoco"
+             loading="lazy">
+        <div>
+          <h3>Mercado Libre</h3>
+          <p>Mis productos recomendados</p>
+        </div>
+      </div>
+      <a class="btn btn-pronto">
+        <i class="fas fa-shopping-cart"></i> Próximamente
+      </a>
+    </div>
+
+    <!-- 4. AMAZON -->
+    <!-- ⚠️ Cuando tengas tu link reemplazá por:
+         <a href="TU_LINK" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn btn-amazon"> -->
+    <div class="card">
+      <div class="card-header">
+        <img src="Amazon-logo-meaning.jpg"
+             alt="Tienda Amazon favoritos recomendados NumLoco"
+             loading="lazy">
+        <div>
+          <h3>Amazon</h3>
+          <p>Mis favoritos en Amazon</p>
+        </div>
+      </div>
+      <a class="btn btn-pronto">
+        <i class="fab fa-amazon"></i> Próximamente
+      </a>
+    </div>
+
+    <!-- 5. INSTAGRAM -->
+    <div class="card">
+      <div class="card-header">
+        <img src="instagram.jfif"
+             alt="Perfil de Instagram NumLoco"
+             loading="lazy">
+        <div>
+          <h3>Instagram</h3>
+          <p>Contenido diario</p>
+        </div>
+      </div>
+      <a href="https://www.instagram.com/numloco1/"
+         target="_blank" rel="noopener noreferrer"
+         title="Seguir a NumLoco en Instagram"
+         class="btn">
         <i class="fab fa-instagram"></i> Ir a Instagram
       </a>
     </div>
 
+    <!-- 6. PINTEREST -->
     <div class="card">
-      <h3>YouTube</h3>
-      <p>Videos y tutoriales</p>
-      <a href="https://www.youtube.com/@NumLocoOficial" target="_blank" class="btn">
+      <div class="card-header">
+        <img src="pinterst.png"
+             alt="Perfil de Pinterest NumLoco ideas virales"
+             loading="lazy">
+        <div>
+          <h3>Pinterest</h3>
+          <p>Ideas y contenido viral</p>
+        </div>
+      </div>
+      <a href="https://ar.pinterest.com/NumLoco/"
+         target="_blank" rel="noopener noreferrer"
+         title="Ver Pinterest de NumLoco"
+         class="btn">
+        <i class="fab fa-pinterest"></i> Ver Pinterest
+      </a>
+    </div>
+
+    <!-- 7. YOUTUBE -->
+    <div class="card">
+      <div class="card-header">
+        <img src="youtube.svg"
+             alt="Canal YouTube NumLoco videos tutoriales monetización"
+             loading="lazy">
+        <div>
+          <h3>YouTube</h3>
+          <p>Videos y tutoriales</p>
+        </div>
+      </div>
+      <a href="https://www.youtube.com/@NumLocoOficial"
+         target="_blank" rel="noopener noreferrer"
+         title="Ver canal de YouTube de NumLoco"
+         class="btn">
         <i class="fab fa-youtube"></i> Ver canal
       </a>
     </div>
 
-  </div>
+    <!-- 8. WHATSAPP -->
+    <!-- ⚠️ REEMPLAZÁ con tu link real de canal WhatsApp -->
+    <div class="card">
+      <div class="card-header">
+        <img src="whats.jfif"
+             alt="Canal de WhatsApp NumLoco comunidad"
+             loading="lazy">
+        <div>
+          <h3>Canal WhatsApp</h3>
+          <p>Este es mi espacio más cercano 💬</p>
+        </div>
+      </div>
+      <a href="https://whatsapp.com/channel/0029Va4dECu6xCSA2RFhWT1H"
+         target="_blank" rel="noopener noreferrer"
+         title="Unirse al canal de WhatsApp de NumLoco"
+         class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> Únete aquí
+      </a>
+    </div>
 
+    <!-- 9. CUENTA RECOMENDADA JAZZ -->
+    <div class="card card-full">
+      <div class="etiqueta">
+        <i class="fas fa-star"></i> Cuenta que recomiendo
+      </div>
+      <div class="card-header">
+        <img src="aprendeconjas.jpeg"
+             alt="AprendeConJazz cuenta TikTok recomendada por NumLoco"
+             loading="lazy">
+        <div>
+          <h3>@aprendeconjazz</h3>
+          <p>Aprendé algo nuevo cada día 🎓</p>
+        </div>
+      </div>
+      <a href="https://www.tiktok.com/@aprendeconjazz"
+         target="_blank" rel="noopener noreferrer"
+         title="Ver cuenta TikTok AprendeConJazz"
+         class="btn">
+        <i class="fab fa-tiktok"></i> Ver en TikTok
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER LEGAL -->
+<div class="footer">
+  ♦️🌻 NumLoco · Contenido sobre monetización y redes sociales<br>
+  <a href="privacidad.html" title="Política de privacidad de NumLoco">Política de privacidad</a> ·
+  <a href="terminos.html" title="Términos y condiciones de NumLoco">Términos y condiciones</a>
 </div>
 
 </body>
