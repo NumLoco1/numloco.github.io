@@ -20,6 +20,15 @@
 <title>NumLoco</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<!-- GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RX8NT1BKKY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RX8NT1BKKY');
+</script>
+
 <style>
 * { box-sizing: border-box; }
 
@@ -406,7 +415,8 @@ body {
   <a href="https://payhip.com/NumLocoCentrodeCreadores"
      target="_blank" rel="noopener noreferrer nofollow sponsored"
      title="Empezar en la Academia de Creadores"
-     class="btn-banner">
+     class="btn-banner"
+     onclick="gtag('event','clic_boton',{event_category:'banner',event_label:'Empezar ahora'});">
     🔥 Empezar ahora
   </a>
 </div>
@@ -457,15 +467,18 @@ body {
     <div class="socials">
       <a href="https://www.instagram.com/numloco1/"
          target="_blank" rel="noopener noreferrer"
-         title="Ir al Instagram de NumLoco">
+         title="Ir al Instagram de NumLoco"
+         onclick="gtag('event','clic_boton',{event_category:'social',event_label:'Instagram'});">
         <i class="fab fa-instagram"></i></a>
       <a href="https://ar.pinterest.com/NumLoco/"
          target="_blank" rel="noopener noreferrer"
-         title="Ir al Pinterest de NumLoco">
+         title="Ir al Pinterest de NumLoco"
+         onclick="gtag('event','clic_boton',{event_category:'social',event_label:'Pinterest'});">
         <i class="fab fa-pinterest"></i></a>
       <a href="https://www.youtube.com/@NumLocoOficial"
          target="_blank" rel="noopener noreferrer"
-         title="Ir al YouTube de NumLoco">
+         title="Ir al YouTube de NumLoco"
+         onclick="gtag('event','clic_boton',{event_category:'social',event_label:'YouTube'});">
         <i class="fab fa-youtube"></i></a>
     </div>
   </div>
@@ -490,7 +503,8 @@ body {
       <a href="https://payhip.com/NumLocoCentrodeCreadores"
          target="_blank" rel="noopener noreferrer nofollow sponsored"
          title="Acceder a la Academia de Creadores de NumLoco"
-         class="btn">
+         class="btn"
+         onclick="gtag('event','clic_boton',{event_category:'afiliado',event_label:'Academia de Creadores'});">
         <i class="fas fa-graduation-cap"></i> Empezar a monetizar →
       </a>
     </div>
@@ -510,12 +524,13 @@ body {
       <a href="https://payhip.com/b/1MDUe"
          target="_blank" rel="noopener noreferrer nofollow sponsored"
          title="Agendar asesoría 1 a 1 con NumLoco"
-         class="btn">
+         class="btn"
+         onclick="gtag('event','clic_boton',{event_category:'afiliado',event_label:'Asesoria 1a1'});">
         <i class="fas fa-calendar-check"></i> Empezar ahora →
       </a>
     </div>
 
-    <!-- 3. MERCADO LIBRE ✅ LINK REAL ACTIVADO -->
+    <!-- 3. MERCADO LIBRE -->
     <div class="card">
       <div class="card-header">
         <img src="mercadolibre.png"
@@ -529,14 +544,17 @@ body {
       <a href="https://meli.la/2UL8oTv"
          target="_blank" rel="noopener noreferrer nofollow sponsored"
          title="Ver productos recomendados de NumLoco en Mercado Libre"
-         class="btn btn-ml">
+         class="btn btn-ml"
+         onclick="gtag('event','clic_boton',{event_category:'afiliado',event_label:'Mercado Libre'});">
         <i class="fas fa-shopping-cart"></i> Ver productos
       </a>
     </div>
 
     <!-- 4. AMAZON -->
     <!-- ⚠️ Cuando tengas tu link reemplazá por:
-         <a href="TU_LINK" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn btn-amazon"> -->
+         <a href="TU_LINK" target="_blank" rel="noopener noreferrer nofollow sponsored"
+            onclick="gtag('event','clic_boton',{event_category:'afiliado',event_label:'Amazon'});"
+            class="btn btn-amazon"> -->
     <div class="card">
       <div class="card-header">
         <img src="Amazon-logo-meaning.jpg"
@@ -566,7 +584,8 @@ body {
       <a href="https://www.instagram.com/numloco1/"
          target="_blank" rel="noopener noreferrer"
          title="Seguir a NumLoco en Instagram"
-         class="btn">
+         class="btn"
+         onclick="gtag('event','clic_boton',{event_category:'social',event_label:'Instagram tarjeta'});">
         <i class="fab fa-instagram"></i> Ir a Instagram
       </a>
     </div>
@@ -574,7 +593,7 @@ body {
     <!-- 6. PINTEREST -->
     <div class="card">
       <div class="card-header">
-        <img src="pinterest.png"
+        <img src="pinterst.png"
              alt="Perfil de Pinterest NumLoco ideas virales"
              loading="lazy">
         <div>
@@ -585,7 +604,8 @@ body {
       <a href="https://ar.pinterest.com/NumLoco/"
          target="_blank" rel="noopener noreferrer"
          title="Ver Pinterest de NumLoco"
-         class="btn">
+         class="btn"
+         onclick="gtag('event','clic_boton',{event_category:'social',event_label:'Pinterest tarjeta'});">
         <i class="fab fa-pinterest"></i> Ver Pinterest
       </a>
     </div>
@@ -604,7 +624,8 @@ body {
       <a href="https://www.youtube.com/@NumLocoOficial"
          target="_blank" rel="noopener noreferrer"
          title="Ver canal de YouTube de NumLoco"
-         class="btn">
+         class="btn"
+         onclick="gtag('event','clic_boton',{event_category:'social',event_label:'YouTube tarjeta'});">
         <i class="fab fa-youtube"></i> Ver canal
       </a>
     </div>
@@ -623,7 +644,8 @@ body {
       <a href="https://whatsapp.com/channel/0029Va4dECu6xCSA2RFhWT1H"
          target="_blank" rel="noopener noreferrer"
          title="Unirse al canal de WhatsApp de NumLoco"
-         class="btn btn-whatsapp">
+         class="btn btn-whatsapp"
+         onclick="gtag('event','clic_boton',{event_category:'social',event_label:'WhatsApp'});">
         <i class="fab fa-whatsapp"></i> Únete aquí
       </a>
     </div>
@@ -645,7 +667,8 @@ body {
       <a href="https://www.tiktok.com/@aprendeconjazz"
          target="_blank" rel="noopener noreferrer"
          title="Ver cuenta TikTok AprendeConJazz"
-         class="btn">
+         class="btn"
+         onclick="gtag('event','clic_boton',{event_category:'recomendado',event_label:'AprendeConJazz TikTok'});">
         <i class="fab fa-tiktok"></i> Ver en TikTok
       </a>
     </div>
