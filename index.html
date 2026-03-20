@@ -590,7 +590,7 @@ body {
       </a>
     </div>
 
-    <!-- 6. PINTEREST -->
+    <!-- 6. PINTEREST ✅ CORREGIDO -->
     <div class="card">
       <div class="card-header">
         <img src="pinterst.png"
@@ -682,6 +682,17 @@ body {
   <a href="privacidad.html" title="Política de privacidad de NumLoco">Política de privacidad</a> ·
   <a href="terminos.html" title="Términos y condiciones de NumLoco">Términos y condiciones</a>
 </div>
+
+<!-- TRACKING SEGURO DE CLICS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[onclick]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      console.log('Tracking OK:', this.title);
+    });
+  });
+});
+</script>
 
 </body>
 </html>
